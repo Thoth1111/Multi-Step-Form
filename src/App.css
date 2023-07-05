@@ -6,3 +6,25 @@
   height: 90vh;
   margin: 5vh 1vw;
 }
+
+.text-white {
+  color: white;
+}
+
+.border-white {
+  border-color: white;
+}
+
+.circles {
+  width: 50px;
+  height: 50px;
+  color: white;
+}
+
+.step-font {
+  font-size: 18px;
+}
+
+.step-head {
+  font-size: 24px;
+}

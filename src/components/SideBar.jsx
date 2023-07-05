@@ -2,41 +2,41 @@ import React from "react";
 
 const SideBar = () => {
     return (
-        <div className="side-bar">
-            <div className="d-flex gap-3 mx-5 my-2">
-                <div className="flex-item">
-                    <h3>1</h3>  
+        <div className="side-bar py-5">
+            <div className="d-flex gap-3 mx-5 mt-4 my-5">
+                <div className="circles d-flex justify-content-center align-items-center border rounded-circle border-white">
+                    <h4>1</h4>  
                 </div>
-                <div className="flex-item">
-                    <p>STEP 1</p>
-                    <p>YOUR INFO</p>
+                <div className="flex-item text-white">
+                    <p className="m-0 p-0 step-font">STEP 1</p>
+                    <h5 className="m-0 p-0 fw-bold step-head">YOUR INFO</h5>
                 </div>                
             </div>
-            <div className="d-flex gap-3 mx-5 my-2">
-                <div className="flex-item">
-                    <h3>2</h3>  
+            <div className="d-flex gap-3 mx-5 my-5">
+                <div className="circles d-flex justify-content-center align-items-center border rounded-circle border-white">
+                    <h4>2</h4>  
                 </div>
-                <div className="flex-item">
-                    <p>STEP 2</p>
-                    <p>SELECT PLAN</p>
+                <div className="flex-item text-white">
+                    <p className="m-0 p-0 step-font">STEP 2</p>
+                    <h5 className="m-0 p-0 fw-bold step-head">SELECT PLAN</h5>
                 </div>                
             </div>
-            <div className="d-flex gap-3 mx-5 my-2">
-                <div className="flex-item">
-                    <h3>3</h3>  
+            <div className="d-flex gap-3 mx-5 my-5">
+                <div className="circles d-flex justify-content-center align-items-center border rounded-circle border-white">
+                    <h4>3</h4>  
                 </div>
-                <div className="flex-item">
-                    <p>STEP 3</p>
-                    <p>ADD-ONS</p>
+                <div className="flex-item text-white">
+                    <p className="m-0 p-0 step-font">STEP 3</p>
+                    <h5 className="m-0 p-0 fw-bold step-head">ADD-ONS</h5>
                 </div>                
             </div>
-            <div className="d-flex gap-3 mx-5 my-2">
-                <div className="flex-item">
-                    <h3>4</h3>  
+            <div className="d-flex gap-3 mx-5 w-5 my-5">
+                <div className="circles d-flex justify-content-center align-items-center border rounded-circle border-white">
+                    <h4>4</h4>  
                 </div>
-                <div className="flex-item">
-                    <p>STEP 4</p>
-                    <p>SUMMARY</p>
+                <div className="flex-item text-white">
+                    <p className="m-0 p-0 step-font">STEP 4</p>
+                    <h5 className="m-0 p-0 fw-bold step-head">SUMMARY</h5>
                 </div>                
             </div>            
         </div>
