@@ -1,11 +1,11 @@
-import SideBar from './components/SideBar'
+import StepForm from './components/StepForm'
 import './App.css'
 
 function App() {
 
   return (
     <>
-     <SideBar />
+     <StepForm />
     </>
   )
 }
