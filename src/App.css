@@ -7,6 +7,11 @@
   margin: 5vh 1vw;
 }
 
+.step-form {
+  width: 80%;
+  height: 90vh;
+}
+
 .text-white {
   color: white;
 }

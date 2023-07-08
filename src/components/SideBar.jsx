@@ -9,7 +9,7 @@ const SideBar = ({ activeStep }) => {
     ];
 
     return (
-        <div className="side-bar py-5">
+        <div className="side-bar">
             {steps.map((step) => (
                 <div className="d-flex gap-3 mx-5 my-5" key={step.stepNumber}>
                     <div className={`circles d-flex justify-content-center align-items-center border rounded-circle border-white
