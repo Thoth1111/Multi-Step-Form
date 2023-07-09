@@ -3,13 +3,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 20%;
-  height: 90vh;
-  margin: 5vh 1vw;
+  height: 96vh;
+  margin: 2vh 1vw;
 }
 
-.step-form {
-  width: 80%;
+.step-forms {
+  width: 70vw;
   height: 90vh;
+  margin: 5vh;
 }
 
 .text-white {
@@ -28,6 +29,20 @@
 
 .step-font {
   font-size: 18px;
+}
+
+.form-font {
+  font-size: 24px;
+  color: gray;
+}
+
+.label {
+  font-size: 22px;
+}
+
+input::placeholder {
+  color: grey;
+  font-size: 24px;
 }
 
 .step-head {

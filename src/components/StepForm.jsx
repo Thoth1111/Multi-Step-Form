@@ -21,13 +21,15 @@ const StepForm = () => {
     return (
         <div className="d-flex">
             <SideBar activeStep={activeStep} />
-            <div>
+            <div className="border border-primary step-forms position-relative">
                 {activeStep === 1 && <Form1 />}
                 {/* {activeStep === 2 && <Form2 />}
                 {activeStep === 3 && <Form3 />}
                 {activeStep === 4 && <Form4 />} */}
-                <div>
+                <div className="position-absolute bottom-0">
+                    { activeStep > 1 && (
                     <button onClick={handleBack}>Go Back</button>
+                    )}
                     <button onClick={handleNext}>Next Step</button>
                 </div>
             </div>
