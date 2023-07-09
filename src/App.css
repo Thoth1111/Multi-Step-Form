@@ -27,6 +27,11 @@
   color: white;
 }
 
+.circles.active {
+  color: black;
+  background-color: #C6E8FE;
+}
+
 .step-font {
   font-size: 18px;
 }
