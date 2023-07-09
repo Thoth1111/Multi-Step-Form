@@ -2,13 +2,13 @@
   background-image: url('./assets/images/desktop-sidebar.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 20%;
-  height: 96vh;
-  margin: 2vh 1vw;
+  width: 20vw;
+  height: 90vh;
+  margin: auto 1vw;
 }
 
 .step-forms {
-  width: 70vw;
+  width: 65vw;
   height: 90vh;
   margin: 5vh;
 }
@@ -47,4 +47,19 @@ input::placeholder {
 
 .step-head {
   font-size: 24px;
+}
+
+.bck-btn {
+  border: none;
+  outline: none;
+  color: gray;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.nxt-btn {
+  background-color: #02295C;
+  color: white;
+  font-size: 24px;
+  width: 160px;
 }

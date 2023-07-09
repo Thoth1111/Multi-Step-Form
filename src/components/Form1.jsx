@@ -8,15 +8,15 @@ const Form1 = () => {
             <form className="mt-5">
                 <div className="d-flex flex-column mb-4">
                     <label htmlFor="name" className="mb-1 label">Name</label>
-                    <input type="text" className="border border-3 rounded p-3" style={{width: '30vw'}} placeholder="e.g. Stephen King" required/>
+                    <input type="text" className="border border-3 rounded p-3" style={{width: '45vw'}} placeholder="e.g. Stephen King" required/>
                 </div>
                 <div className="d-flex flex-column mb-4">
                     <label htmlFor="email" className="mb-1 label">Email Address</label>
-                    <input type="email" className="border border-3 rounded p-3" style={{width: '30vw'}} placeholder="e.g. stephenking@lorem.com" required/>
+                    <input type="email" className="border border-3 rounded p-3" style={{width: '45vw'}} placeholder="e.g. stephenking@lorem.com" required/>
                 </div>
                 <div className="d-flex flex-column mb-4">
                     <label htmlFor="phone" className="mb-1 label">Phone Number</label>
-                    <input type="tel" className="border border-3 rounded p-3" style={{width: '30vw'}} placeholder="e.g. +1 234 567 890" required/>
+                    <input type="tel" className="border border-3 rounded p-3" style={{width: '45vw'}} placeholder="e.g. +1 234 567 890" required/>
                 </div>
             </form>
         </div>        
