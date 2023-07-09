@@ -29,7 +29,7 @@
 
 .circles.active {
   color: black;
-  background-color: #C6E8FE;
+  background-color: #c6e8fe;
 }
 
 .step-font {
@@ -63,7 +63,7 @@ input::placeholder {
 }
 
 .nxt-btn {
-  background-color: #02295C;
+  background-color: #02295c;
   color: white;
   font-size: 24px;
   width: 160px;
