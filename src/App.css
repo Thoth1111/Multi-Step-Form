@@ -2,9 +2,15 @@
   background-image: url('./assets/images/desktop-sidebar.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 20%;
+  width: 20vw;
   height: 90vh;
-  margin: 5vh 1vw;
+  margin: auto 1vw;
+}
+
+.step-forms {
+  width: 65vw;
+  height: 90vh;
+  margin: 5vh;
 }
 
 .text-white {
@@ -21,10 +27,44 @@
   color: white;
 }
 
+.circles.active {
+  color: black;
+  background-color: #c6e8fe;
+}
+
 .step-font {
   font-size: 18px;
 }
 
+.form-font {
+  font-size: 24px;
+  color: gray;
+}
+
+.label {
+  font-size: 22px;
+}
+
+input::placeholder {
+  color: grey;
+  font-size: 24px;
+}
+
 .step-head {
   font-size: 24px;
+}
+
+.bck-btn {
+  border: none;
+  outline: none;
+  color: gray;
+  font-size: 24px;
+  background-color: transparent;
+}
+
+.nxt-btn {
+  background-color: #02295c;
+  color: white;
+  font-size: 24px;
+  width: 160px;
 }
