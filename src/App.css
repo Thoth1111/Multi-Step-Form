@@ -58,8 +58,12 @@ input::placeholder {
   border: none;
   outline: none;
   color: gray;
-  font-size: 24px;
+  font-size: 26px;
   background-color: transparent;
+}
+
+.bck-btn:hover {
+  color: #01295c;
 }
 
 .nxt-btn {
@@ -67,4 +71,18 @@ input::placeholder {
   color: white;
   font-size: 24px;
   width: 160px;
+}
+
+.nxt-btn:hover {
+  background-color: #938cff;
+}
+
+.plans {
+  width: 220px;
+  height: 240px;
+}
+
+.plan-font {
+  font-size: 24px;
+  color: #142945;
 }
