@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SideBar from './SideBar';
 import Form1 from './Form1';
 import Form2 from './Form2';
+import Form3 from './Form3'
 
 const StepForm = () => {
     const [activeStep, setActiveStep] = useState(1);
@@ -25,8 +26,8 @@ const StepForm = () => {
             <div className="step-forms position-relative">
                 {activeStep === 1 && <Form1 />}
                 {activeStep === 2 && <Form2 />}
-                {/* {activeStep === 3 && <Form3 />}
-                {activeStep === 4 && <Form4 />} */}
+                {activeStep === 3 && <Form3 />}
+                {/* {activeStep === 4 && <Form4 />} */}
                 <div className="position-absolute bottom-0 p-5" style={{width: '50vw'}}>
                     <div className="d-flex justify-content-between pb-5 w-100">
                         <div>
