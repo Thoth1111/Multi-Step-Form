@@ -86,3 +86,40 @@ input::placeholder {
   font-size: 24px;
   color: #142945;
 }
+
+.switch-container {
+  position: relative;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggler {
+  width: 70px;
+  height: 30px;
+  background-color: #032b5f;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-circle {
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50px;
+  position: absolute;
+  left: 6px;
+  bottom: 1.5px;
+  transition: transform 0.2s ease;
+}
+
+.toggle-checkbox:checked + .toggler .toggle-circle {
+  transform: translateX(30px);
+}
+
+.addOn-checkbox {
+  width: 25px;
+  height: 25px;
+}

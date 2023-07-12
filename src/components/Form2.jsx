@@ -23,12 +23,15 @@ const Form2 = () => {
                     </div>
                 ))}
             </div>
-            <div className="d-flex rounded justify-content-center gap-5 mt-5 align-items-center">
-                <p className="form-font fw-bold">Monthly</p>
-                <div className="form-check form-switch">
-                    <input className="form-check-input" type="checkbox" id="toggle-switch"/>
+            <div className="d-flex rounded justify-content-center gap-5 pt-2 mt-5 align-items-center" style={{width: '710px', backgroundColor: '#f8f9fe'}}>
+                <p className="form-font">Monthly</p>
+                <div className="switch-container">
+                    <input className="toggle-checkbox" type="checkbox" id="toggle-switch"/>
+                    <label for="toggle-switch" className="toggler">
+                        <div className="toggle-circle"></div>
+                    </label>
                 </div>
-                <p className="form-font fw-bold">Yearly</p>                
+                <p className="form-font">Yearly</p>                
             </div>
         </div>
     );
