@@ -118,3 +118,8 @@ input::placeholder {
 .toggle-checkbox:checked + .toggler .toggle-circle {
   transform: translateX(30px);
 }
+
+.addOn-checkbox {
+  width: 25px;
+  height: 25px;
+}
