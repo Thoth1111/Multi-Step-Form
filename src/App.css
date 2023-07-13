@@ -87,7 +87,7 @@ input::placeholder {
 
 .plans {
   width: 220px;
-  height: fit-content;
+  height: auto;
   border: 1px solid #c9c9c9;
 }
 
@@ -137,7 +137,8 @@ input::placeholder {
   height: 25px;
 }
 
-.selected-plan, .picked-addOn {
+.selected-plan,
+.picked-addOn {
   border: 1px solid #635e9e;
   background-color: #f8f9fe;
 }
