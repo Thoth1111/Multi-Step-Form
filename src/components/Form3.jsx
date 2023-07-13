@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const Form3 = () => {
     const addOns = [
-        {addOnNumber: 1, name: 'Online service', description: 'Access to multiplayer games'},
-        {addOnNumber: 2, name: 'Larger storage', description: 'Extra 1TB of cloud save'},
-        {addOnNumber: 3, name: 'Customizable profile', description: 'Custom theme on your profile'}
+        {addOnNumber: 1, name: 'Online service', description: 'Access to multiplayer games', price: 1},
+        {addOnNumber: 2, name: 'Larger storage', description: 'Extra 1TB of cloud save', price: 2},
+        {addOnNumber: 3, name: 'Customizable profile', description: 'Custom theme on your profile', price: 2}
     ];
 
     const [checked, setChecked] = useState(false);
