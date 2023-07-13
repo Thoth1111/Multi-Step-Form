@@ -128,12 +128,16 @@ input::placeholder {
   transform: translateX(30px);
 }
 
+.addOn {
+  border: 1px solid #c9c9c9;
+}
+
 .addOn-checkbox {
   width: 25px;
   height: 25px;
 }
 
-.selected-plan {
+.selected-plan, .picked-addOn {
   border: 1px solid #635e9e;
   background-color: #f8f9fe;
 }
