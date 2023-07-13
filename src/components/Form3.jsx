@@ -14,7 +14,7 @@ const Form3 = () => {
 
             <div>
                 {addOns.map((addOn) => (
-                    <div className="d-flex gap-4 align-items-center form-check border rounded mb-4" key={addOn.addOnNumber} style={{width: '45vw'}}>
+                    <div className="d-flex gap-4 align-items-center form-check border rounded mb-3" key={addOn.addOnNumber} style={{width: '45vw'}}>
                         <input type="checkbox" className="addOn-checkbox" id="addOn-1"/>
                         <div className="p-4">
                             <label className="form-check-label plan-font fw-bold" for="addOn-1">{addOn.name}</label>

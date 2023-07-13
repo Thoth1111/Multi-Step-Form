@@ -41,6 +41,12 @@
   color: gray;
 }
 
+.active-term {
+  font-size: 24px;
+  font-weight: bold;
+  color: #032b5f;
+}
+
 .label {
   font-size: 22px;
 }
@@ -68,6 +74,8 @@ input::placeholder {
 
 .nxt-btn {
   background-color: #02295c;
+  border: none;
+  outline: none;
   color: white;
   font-size: 24px;
   width: 160px;
@@ -79,7 +87,8 @@ input::placeholder {
 
 .plans {
   width: 220px;
-  height: 240px;
+  height: fit-content;
+  border: 1px solid #c9c9c9;
 }
 
 .plan-font {
@@ -122,4 +131,9 @@ input::placeholder {
 .addOn-checkbox {
   width: 25px;
   height: 25px;
+}
+
+.selected-plan {
+  border: 1px solid #635e9e;
+  background-color: #f8f9fe;
 }
