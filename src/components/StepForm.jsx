@@ -39,7 +39,7 @@ const StepForm = () => {
                         <div>
                             { activeStep < totalSteps && (
                             <button className="nxt-btn rounded p-3" onClick={handleNext}>Next Step</button>
-                            )} :
+                            )}
                             { activeStep === totalSteps && (
                             <button className="nxt-btn rounded p-3" onClick={handleNext}>Confirm</button>
                             )}
