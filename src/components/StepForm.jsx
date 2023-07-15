@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUserInfo } from '../redux/userSlice';
 import SideBar from './SideBar';
 import Form1 from './Form1';
 import Form2 from './Form2';
@@ -8,6 +10,11 @@ import Form4 from './Form4';
 const StepForm = () => {
     const [activeStep, setActiveStep] = useState(1);
     const totalSteps = 4;
+    const dispatch = useDispatch();
+
+    const handleUserData = (formData) => {
+        dispatch(setUserInfo(formData));
+    }
 
     const handleNext = () => {
         if (activeStep < totalSteps) {
@@ -25,7 +32,7 @@ const StepForm = () => {
         <div className="d-flex">
             <SideBar activeStep={activeStep} />
             <div className="step-forms position-relative">
-                {activeStep === 1 && <Form1 />}
+                {activeStep === 1 && <Form1 onUser={handleUserData}/>}
                 {activeStep === 2 && <Form2 />}
                 {activeStep === 3 && <Form3 />}
                 {activeStep === 4 && <Form4 />}
@@ -41,7 +48,7 @@ const StepForm = () => {
                             <button className="nxt-btn rounded p-3" onClick={handleNext}>Next Step</button>
                             )}
                             { activeStep === totalSteps && (
-                            <button className="nxt-btn rounded p-3" onClick={handleNext}>Confirm</button>
+                            <button className="nxt-btn rounded p-3">Confirm</button>
                             )}
                         </div>
                     </div>
