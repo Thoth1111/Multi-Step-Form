@@ -5,10 +5,15 @@ const addOnSlice = createSlice({
   initialState: [],
 
   reducers: {
-    pickAddOn: (state, action) => [...state, action.payload],
+    setAddOn: (state, action) => {
+      return state = action.payload;
+    },
+    updateAddOn: (state) => {
+      state.forEach((addOn) => addOn.price *= 10);
+    }
   },
 });
 
-export const { pickAddOn } = addOnSlice.actions;
+export const { setAddOn, updateAddOn } = addOnSlice.actions;
 
 export default addOnSlice.reducer;
