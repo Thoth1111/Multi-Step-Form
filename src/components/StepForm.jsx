@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { setPlan } from '../redux/planSlice';
 import { setUserInfo } from '../redux/userSlice';
 import SideBar from './SideBar';
 import Form1 from './Form1';
@@ -15,6 +16,10 @@ const StepForm = () => {
     const handleUserData = (formData) => {
         dispatch(setUserInfo(formData));
     }
+
+    const handlePlanData = (selected) => {
+        dispatch(setPlan(selected))
+    };
 
     const handleNext = () => {
         if (activeStep < totalSteps) {
@@ -33,7 +38,7 @@ const StepForm = () => {
             <SideBar activeStep={activeStep} />
             <div className="step-forms position-relative">
                 {activeStep === 1 && <Form1 onUser={handleUserData}/>}
-                {activeStep === 2 && <Form2 />}
+                {activeStep === 2 && <Form2 onPlan={handlePlanData}/>}
                 {activeStep === 3 && <Form3 />}
                 {activeStep === 4 && <Form4 />}
                 <div className="position-absolute bottom-0 p-5" style={{width: '50vw'}}>
