@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import arcadeIcon from '../assets/images/icon-arcade.svg';
 import advancedIcon from '../assets/images/icon-advanced.svg';
 import proIcon from '../assets/images/icon-pro.svg';
 
-const Form2 = () => {
+const Form2 = ( {onPlan} ) => {
     const plans = [
         {planNumber: 1, type: 'Arcade', price: 9, icon: arcadeIcon},
         {planNumber: 2, type: 'Advanced', price: 12, icon: advancedIcon},
@@ -11,15 +11,25 @@ const Form2 = () => {
     ];
 
     const [yearly, setYearly] = useState(false);
-    const [selected, setSelected] = useState(null);
+    const [selected, setSelected] = useState(plans[0]);
+    const calculatePrice = () => {
+        return yearly ? selected.price * 10 : selected.price;
+    }
+    const type = selected.type
+    const price = calculatePrice();
+
+    useEffect(() => {
+        onPlan({type, price, yearly})
+    }, [type, yearly, onPlan]);
 
     const handleToggle = () => {
         setYearly(!yearly);
     };
 
     const handleSelected = (num) => {
-        setSelected(num);
-    }
+        const selectedPlan = plans[num -1];
+        setSelected(selectedPlan);
+    };
 
     return (
         <div className="p-5">
@@ -30,7 +40,7 @@ const Form2 = () => {
                 {plans.map((plan) => (
                     <div 
                      key={plan.planNumber}
-                     className={`plans rounded p-4 ${plan.planNumber === selected ? 'selected-plan' : ''}`}
+                     className={`plans rounded p-4 ${plan.planNumber === selected.planNumber ? 'selected-plan' : ''}`}
                      onClick={() => handleSelected(plan.planNumber)}
                      role="button"
                      tabIndex={0}

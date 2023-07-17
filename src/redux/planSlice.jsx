@@ -5,15 +5,15 @@ const planSlice = createSlice({
     initialState: {
         type: '',
         price: '',
-        annual: false,
+        yearly: false,
     },
 
     reducers: {
         setPlan: (state, action) => {
-            const { type, price, annual } = action.payload;
+            const { type, price, yearly } = action.payload;
             state.type = type;
             state.price = price;
-            state.annual = annual;
+            state.yearly = yearly;
         },       
     },
 });
