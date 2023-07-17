@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-const Form1 = ({ onUser }) => {
+const Form1 = ({ user }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
 
     useEffect(() => {
-        onUser({name, email, phone});
-    }, [name, email, phone, onUser]);
+        user({name, email, phone});
+    }, [name, email, phone, user]);
 
     return (
         <div className="p-5">

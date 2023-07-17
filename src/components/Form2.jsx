@@ -3,7 +3,7 @@ import arcadeIcon from '../assets/images/icon-arcade.svg';
 import advancedIcon from '../assets/images/icon-advanced.svg';
 import proIcon from '../assets/images/icon-pro.svg';
 
-const Form2 = ( {onPlan} ) => {
+const Form2 = ( {pickedPlan} ) => {
     const plans = [
         {planNumber: 1, type: 'Arcade', price: 9, icon: arcadeIcon},
         {planNumber: 2, type: 'Advanced', price: 12, icon: advancedIcon},
@@ -19,8 +19,8 @@ const Form2 = ( {onPlan} ) => {
     const price = calculatePrice();
 
     useEffect(() => {
-        onPlan({type, price, yearly})
-    }, [type, yearly, onPlan]);
+        pickedPlan({type, price, yearly})
+    }, [type, yearly, pickedPlan]);
 
     const handleToggle = () => {
         setYearly(!yearly);

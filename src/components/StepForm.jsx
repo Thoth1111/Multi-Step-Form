@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { setPlan } from '../redux/planSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { setUserInfo } from '../redux/userSlice';
+import { setPlan } from '../redux/planSlice';
+import { setAddOn, updateAddOn } from '../redux/addOnSlice';
 import SideBar from './SideBar';
 import Form1 from './Form1';
 import Form2 from './Form2';
@@ -12,13 +13,21 @@ const StepForm = () => {
     const [activeStep, setActiveStep] = useState(1);
     const totalSteps = 4;
     const dispatch = useDispatch();
+    const yearly = useSelector((state) => state.plan.yearly);
 
     const handleUserData = (formData) => {
         dispatch(setUserInfo(formData));
     }
 
     const handlePlanData = (selected) => {
-        dispatch(setPlan(selected))
+        dispatch(setPlan(selected));
+    };
+
+    const handleAddOns = (checkedAddOns) => {
+        dispatch(setAddOn(checkedAddOns));
+        if(yearly) {
+            dispatch(updateAddOn());
+        };
     };
 
     const handleNext = () => {
@@ -37,9 +46,9 @@ const StepForm = () => {
         <div className="d-flex">
             <SideBar activeStep={activeStep} />
             <div className="step-forms position-relative">
-                {activeStep === 1 && <Form1 onUser={handleUserData}/>}
-                {activeStep === 2 && <Form2 onPlan={handlePlanData}/>}
-                {activeStep === 3 && <Form3 />}
+                {activeStep === 1 && <Form1 user={handleUserData}/>}
+                {activeStep === 2 && <Form2 pickedPlan={handlePlanData}/>}
+                {activeStep === 3 && <Form3 extras={handleAddOns}/>}
                 {activeStep === 4 && <Form4 />}
                 <div className="position-absolute bottom-0 p-5" style={{width: '50vw'}}>
                     <div className="d-flex justify-content-between pb-5 w-100">
