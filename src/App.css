@@ -142,3 +142,8 @@ input::placeholder {
   border: 1px solid #635e9e;
   background-color: #f8f9fe;
 }
+
+.thanks-icon {
+  width: 12vw;
+  height: 12vh;
+}
