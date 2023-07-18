@@ -44,6 +44,10 @@ const StepForm = () => {
         }
     };
 
+    const handleChangePlan = () => {
+        setActiveStep(2);
+    }
+
     const handleConfirm = () => {
         setConfirmed(true);
     }
@@ -55,7 +59,8 @@ const StepForm = () => {
                 {activeStep === 1 && <Form1 user={handleUserData}/>}
                 {activeStep === 2 && <Form2 pickedPlan={handlePlanData}/>}
                 {activeStep === 3 && <Form3 extras={handleAddOns}/>}
-                {activeStep === 4 && confirmed ? <ThankYou /> : activeStep === 4 && <Form4 />}
+                {activeStep === 4 && !confirmed && <Form4 changePlan={handleChangePlan}/>}
+                {activeStep === 4 && confirmed && <ThankYou />}
                 <div className="position-absolute bottom-0 p-5" style={{width: '50vw'}}>
                     <div className="d-flex justify-content-between pb-5 w-100">
                         <div>
