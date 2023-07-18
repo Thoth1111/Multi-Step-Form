@@ -1,12 +1,17 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-const Form4 = () => {
+const Form4 = ( {changePlan} ) => {
     const plan = useSelector((state) => state.plan);
     const yearly = useSelector((state) => state.plan.yearly);
     const addOns = useSelector((state) => state.addOn);
     const addOnsPrice = addOns.reduce((sum, addOn) => sum + addOn.price, 0)
     const totalPrice = plan.price + addOnsPrice;
+
+    const handleChangeClick = (event) => {
+        event.preventDefault();
+        changePlan();
+    }
 
     return (
         <div className="p-5">
@@ -18,7 +23,7 @@ const Form4 = () => {
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <p className="plan-font fw-bold" style={{fontSize: '26px'}}>{plan.type} (Yearly)</p>
-                            <a className="form-font" style={{fontSize: '22px'}}>change</a>
+                            <a href="#" onClick={handleChangeClick} className="form-font change-link" style={{fontSize: '22px'}}>change</a>
                         </div>
                         <div>
                             <p className="plan-font fw-bold" style={{fontSize: '26px'}}>${plan.price}/yr</p>
@@ -29,7 +34,7 @@ const Form4 = () => {
                     <div className="d-flex justify-content-between align-items-center">
                         <div>
                             <p className="plan-font fw-bold" style={{fontSize: '26px'}}>{plan.type} (Monthly)</p>
-                            <a className="form-font" style={{fontSize: '22px'}}>change</a>
+                            <a href="#" onClick={handleChangeClick} className="form-font change-link" style={{fontSize: '22px'}}>change</a>
                         </div>
                         <div>
                             <p className="plan-font fw-bold" style={{fontSize: '26px'}}>${plan.price}/mo</p>

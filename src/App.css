@@ -147,3 +147,7 @@ input::placeholder {
   width: 12vw;
   height: 12vh;
 }
+
+.change-link:hover {
+  color: #052858;
+}
