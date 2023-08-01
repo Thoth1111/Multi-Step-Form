@@ -53,7 +53,7 @@ const StepForm = () => {
     }
 
     return (
-        <div className="d-flex">
+        <div className="form-container">
             <SideBar activeStep={activeStep} />
             <div className="step-forms position-relative">
                 {activeStep === 1 && <Form1 user={handleUserData}/>}
