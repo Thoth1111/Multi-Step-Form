@@ -1,4 +1,4 @@
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .form-container {
     display: flex;
   }
@@ -158,7 +158,6 @@ input::placeholder {
   color: #052858;
 }
 
-
 @media screen and (max-width: 768px) {
   .side-bar {
     display: flex;
@@ -179,5 +178,4 @@ input::placeholder {
   .sidebar-details {
     display: none;
   }
-  
 }
