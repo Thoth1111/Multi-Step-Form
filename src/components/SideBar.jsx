@@ -11,7 +11,7 @@ const SideBar = ({ activeStep }) => {
     return (
         <div className="side-bar">
             {steps.map((step) => (
-                <div className="d-flex gap-3 m-5" key={step.stepNumber}>
+                <div className="nav-steps" key={step.stepNumber}>
                     <div className={`circles d-flex justify-content-center align-items-center border rounded-circle border-white
                      ${step.stepNumber === activeStep ? "active" : ""}`}
                     >
