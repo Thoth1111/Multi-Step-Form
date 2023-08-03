@@ -11,6 +11,12 @@
     height: 90vh;
     margin: auto 1vw;
   }
+
+  .nav-steps {
+    display: flex;
+    gap: 8%;
+    margin: 56px;
+  }
 }
 
 .step-forms {
@@ -158,7 +164,7 @@ input::placeholder {
   color: #052858;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
   .side-bar {
     display: flex;
     gap: 2%;
@@ -168,14 +174,28 @@ input::placeholder {
     background-size: contain;
     width: 100vw;
     height: 20vh;
+    padding: 0 20vw;
   }
 
   .form-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: #c9c9c9;
   }
 
   .sidebar-details {
     display: none;
+  }
+
+  .nav-steps {
+    display: flex;
+    gap: 10%;
+    margin: 20px;
+  }
+
+  .step-forms {
+    width: 80vw;
+    background-color: #fff;
   }
 }
