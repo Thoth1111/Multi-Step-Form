@@ -177,7 +177,7 @@ input::placeholder {
   color: #052858;
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
   .side-bar {
     display: flex;
     gap: 2%;
