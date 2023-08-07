@@ -15,7 +15,7 @@ const SideBar = ({ activeStep }) => {
                     <div className={`circles d-flex justify-content-center align-items-center border rounded-circle border-white
                      ${step.stepNumber === activeStep ? "active" : ""}`}
                     >
-                        <h4>{step.stepNumber}</h4>
+                        <h5>{step.stepNumber}</h5>
                     </div>
                     <div className="text-white sidebar-details">
                         <p className="m-0 p-0 step-font">{step.stepHead}</p>
