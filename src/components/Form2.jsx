@@ -33,20 +33,20 @@ const Form2 = ( {pickedPlan} ) => {
 
     return (
         <div className="p-5">
-            <h1 className="fw-bold">Select your plan</h1>
+            <h3 className="fw-bold">Select your plan</h3>
             <p className="form-font mb-5">You have the option of monthly or yearly billing</p>
 
-            <div className="d-flex gap-4 mb-5" style={{marginTop: '80px'}}>
+            <div className="d-flex gap-4 mb-5">
                 {plans.map((plan) => (
                     <div 
                      key={plan.planNumber}
-                     className={`plans rounded p-4 ${plan.planNumber === selected.planNumber ? 'selected-plan' : ''}`}
+                     className={`plans rounded p-3 ${plan.planNumber === selected.planNumber ? 'selected-plan' : ''}`}
                      onClick={() => handleSelected(plan.planNumber)}
                      role="button"
                      tabIndex={0}
                     >
-                        <img src={plan.icon} className="mb-5" alt="arcade icon" />
-                        <p className="mt-3 plan-font fw-bold">{plan.type}</p>
+                        <img src={plan.icon} className="mb-2" alt="arcade icon" />
+                        <p className="mt-2 plan-font fw-bold">{plan.type}</p>
                         { yearly ? (
                             <>
                                 <p className="form-font">${plan.price * 10}/yr</p>
