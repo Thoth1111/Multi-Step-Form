@@ -1,30 +1,38 @@
 @media screen and (min-width: 768px) {
   .form-container {
     display: flex;
+    align-items: center;
+    height: 99vh;
   }
 
   .side-bar {
     background-image: url('./assets/images/desktop-sidebar.svg');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 20vw;
-    height: 90vh;
+    background-size: contain;
+    width: 28vw;
+    height: 97vh;
     margin: auto 1vw;
   }
 
   .nav-steps {
     display: flex;
     gap: 8%;
-    margin: 56px;
+    margin: 8% 0 8% 8%;
+  }
+
+  .step-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75%;
+    height: 97vh;
+    margin: 5vh;
+  }
+
+  .form-component {
+    height: 60vh;
   }
 }
-
-.step-forms {
-  width: 65vw;
-  height: 90vh;
-  margin: 5vh;
-}
-
 .text-white {
   color: white;
 }
@@ -34,8 +42,8 @@
 }
 
 .circles {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   color: white;
 }
 
@@ -45,38 +53,42 @@
 }
 
 .step-font {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .form-font {
-  font-size: 24px;
+  font-size: 18px;
   color: gray;
 }
 
 .active-term {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
   color: #032b5f;
 }
 
 .label {
-  font-size: 22px;
+  font-size: 18px;
 }
 
 input::placeholder {
   color: grey;
-  font-size: 24px;
+  font-size: 14px;
+}
+
+.custom-width1 {
+  width: 43vw;
 }
 
 .step-head {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .bck-btn {
   border: none;
   outline: none;
   color: gray;
-  font-size: 26px;
+  font-size: 20px;
   background-color: transparent;
 }
 
@@ -89,7 +101,7 @@ input::placeholder {
   border: none;
   outline: none;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   width: 160px;
 }
 
@@ -98,13 +110,13 @@ input::placeholder {
 }
 
 .plans {
-  width: 220px;
-  height: auto;
+  width: 180px;
+  height: 200px;
   border: 1px solid #c9c9c9;
 }
 
 .plan-font {
-  font-size: 24px;
+  font-size: 18px;
   color: #142945;
 }
 
@@ -117,8 +129,8 @@ input::placeholder {
 }
 
 .toggler {
-  width: 70px;
-  height: 30px;
+  width: 60px;
+  height: 25px;
   background-color: #032b5f;
   border-radius: 15px;
   position: relative;
@@ -126,13 +138,13 @@ input::placeholder {
 }
 
 .toggle-circle {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   background-color: white;
   border-radius: 50px;
   position: absolute;
-  left: 6px;
-  bottom: 1.5px;
+  left: 3px;
+  bottom: 1.4px;
   transition: transform 0.2s ease;
 }
 
@@ -145,8 +157,8 @@ input::placeholder {
 }
 
 .addOn-checkbox {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
 }
 
 .selected-plan,
