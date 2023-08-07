@@ -55,25 +55,27 @@ const StepForm = () => {
     return (
         <div className="form-container">
             <SideBar activeStep={activeStep} />
-            <div className="step-forms position-relative">
-                {activeStep === 1 && <Form1 user={handleUserData}/>}
-                {activeStep === 2 && <Form2 pickedPlan={handlePlanData}/>}
-                {activeStep === 3 && <Form3 extras={handleAddOns}/>}
-                {activeStep === 4 && !confirmed && <Form4 changePlan={handleChangePlan}/>}
-                {activeStep === 4 && confirmed && <ThankYou />}
-                <div className="position-absolute bottom-0 p-5" style={{width: '50vw'}}>
+            <div className="step-forms">
+                <div className="form-component">
+                    {activeStep === 1 && <Form1 user={handleUserData}/>}
+                    {activeStep === 2 && <Form2 pickedPlan={handlePlanData}/>}
+                    {activeStep === 3 && <Form3 extras={handleAddOns}/>}
+                    {activeStep === 4 && !confirmed && <Form4 changePlan={handleChangePlan}/>}
+                    {activeStep === 4 && confirmed && <ThankYou />}
+                </div>
+                <div style={{width: '48vw'}}>
                     <div className="d-flex justify-content-between pb-5 w-100">
                         <div>
                             { activeStep > 1 && !confirmed ? 
-                            <button className="bck-btn p-3" onClick={handleBack}>Go Back</button> : null
+                            <button className="bck-btn p-2" onClick={handleBack}>Go Back</button> : null
                             }
                         </div>
                         <div>
                             { activeStep < totalSteps && (
-                            <button className="nxt-btn rounded p-3" onClick={handleNext}>Next Step</button>
+                            <button className="nxt-btn rounded p-2" onClick={handleNext}>Next Step</button>
                             )}
                             { activeStep === totalSteps && !confirmed ? 
-                            <button className="nxt-btn rounded p-3" onClick={handleConfirm}>Confirm</button> : null
+                            <button className="nxt-btn rounded p-2" onClick={handleConfirm}>Confirm</button> : null
                             }
                         </div>
                     </div>
