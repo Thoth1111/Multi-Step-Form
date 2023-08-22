@@ -63,7 +63,7 @@ const StepForm = () => {
                     {activeStep === 4 && !confirmed && <Form4 changePlan={handleChangePlan}/>}
                     {activeStep === 4 && confirmed && <ThankYou />}
                 </div>
-                <div style={{width: '48vw'}}>
+                <div className="step-switch-container">
                     <div className="d-flex justify-content-between pb-5 w-100">
                         <div>
                             { activeStep > 1 && !confirmed ? 
