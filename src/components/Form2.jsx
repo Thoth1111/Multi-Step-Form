@@ -36,7 +36,7 @@ const Form2 = ( {pickedPlan} ) => {
             <h3 className="fw-bold">Select your plan</h3>
             <p className="form-font mb-5">You have the option of monthly or yearly billing</p>
 
-            <div className="d-flex gap-4 mb-5">
+            <div className="plan-container">
                 {plans.map((plan) => (
                     <div 
                      key={plan.planNumber}
@@ -45,12 +45,12 @@ const Form2 = ( {pickedPlan} ) => {
                      role="button"
                      tabIndex={0}
                     >
-                        <img src={plan.icon} className="mb-2" alt="arcade icon" />
+                        <img src={plan.icon} className="plan-icon mb-2" alt="arcade icon" />
                         <p className="mt-2 plan-font fw-bold">{plan.type}</p>
                         { yearly ? (
                             <>
                                 <p className="form-font">${plan.price * 10}/yr</p>
-                                <p className="form-font" style={{color: '#032b5f', fontSize: '20px'}}>2 months free</p>
+                                <p className="form-font" style={{color: '#032b5f'}}>2 months free</p>
                             </>
                         ) : (
                             <p className="form-font">${plan.price}/mo</p>
@@ -58,7 +58,7 @@ const Form2 = ( {pickedPlan} ) => {
                     </div>
                 ))}
             </div>
-            <div className="d-flex rounded justify-content-center gap-5 pt-2 mt-5 align-items-center" style={{width: '710px', backgroundColor: '#f8f9fe'}}>
+            <div className="plan-switcher d-flex rounded justify-content-center gap-5 pt-2 mt-5 align-items-center">
                 <p className={`form-font ${yearly ? "" : "active-term"}`}>Monthly</p>
                 <div className="switch-container">
                     <input className="toggle-checkbox" type="checkbox" id="toggle-switch" checked={yearly} onChange={handleToggle}/>
