@@ -57,7 +57,7 @@ React, Redux, Bootstrap
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://thoth1111.github.io/Multi-Step-Form/)
+- [Live Demo Link](https://multi-step-form-hbyi.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
