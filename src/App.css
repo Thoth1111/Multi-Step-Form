@@ -264,7 +264,7 @@ input::placeholder {
     width: 100px;
     margin: 2vh 4vw;
   }
-  
+
   .nxt-btn:hover {
     background-color: #938cff;
   }
@@ -277,7 +277,7 @@ input::placeholder {
     margin: 2vh 4vw;
     background-color: transparent;
   }
-  
+
   .bck-btn:hover {
     color: #01295c;
   }
@@ -326,7 +326,7 @@ input::placeholder {
     position: relative;
     cursor: pointer;
   }
-  
+
   .toggle-circle {
     width: 16px;
     height: 16px;
@@ -337,7 +337,7 @@ input::placeholder {
     bottom: 1px;
     transition: transform 0.2s ease;
   }
-  
+
   .toggle-checkbox:checked + .toggler .toggle-circle {
     transform: translateX(16px);
   }
@@ -345,7 +345,7 @@ input::placeholder {
   .addOn {
     border: 1px solid #c9c9c9;
   }
-  
+
   .addOn-checkbox {
     width: 15px;
     height: 15px;
