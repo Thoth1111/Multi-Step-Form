@@ -44,6 +44,11 @@ const StepForm = () => {
         }
     };
 
+    const handleNew = () => {
+        setActiveStep(1);
+        setConfirmed(false);
+    }
+
     const handleChangePlan = () => {
         setActiveStep(2);
     }
@@ -68,6 +73,9 @@ const StepForm = () => {
                         <div>
                             { activeStep > 1 && !confirmed ? 
                             <button className="bck-btn p-2" onClick={handleBack}>Go Back</button> : null
+                            }
+                            { activeStep === totalSteps && confirmed ?
+                            <button className="bck-btn p-2" onClick={handleNew}>New Order</button> : null
                             }
                         </div>
                         <div>
