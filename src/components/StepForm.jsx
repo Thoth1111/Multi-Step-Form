@@ -12,14 +12,20 @@ import ThankYou from './ThankYou';
 
 const StepForm = () => {
     const [activeStep, setActiveStep] = useState(1);
+    const [isUserDetails, setIsUserDetails] = useState(false);
     const [confirmed, setConfirmed] = useState(false);
     const totalSteps = 4;
     const dispatch = useDispatch();
     const yearly = useSelector((state) => state.plan.yearly);
 
     const handleUserData = (formData) => {
-        dispatch(setUserInfo(formData));
-    }
+        if (formData.name !== '' && formData.email !== '' && formData.phone !== '') {
+            setIsUserDetails(true);
+            dispatch(setUserInfo(formData));
+        } else {
+            setIsUserDetails(false);
+        }
+    };
 
     const handlePlanData = (selected) => {
         dispatch(setPlan(selected));
@@ -33,7 +39,13 @@ const StepForm = () => {
     };
 
     const handleNext = () => {
-        if (activeStep < totalSteps) {
+        if (activeStep === 1 && !isUserDetails) {
+            alert('Please fill in your details first!');
+        }
+        else {
+            setActiveStep(activeStep + 1);
+        }
+        if (activeStep > 1 && activeStep < totalSteps) {
             setActiveStep(activeStep + 1);
         }
     };
