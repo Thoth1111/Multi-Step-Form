@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
 const Form1 = ({ user }) => {
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
+    const [userData, setUserData] = useState({
+        name: '',
+        email: '',
+        phone: ''
+    });
+
+    const handleUserData = (e) => {
+        const { name, value } = e.target
+        setUserData({
+            ...userData, [name]: value,
+        })           
+    };
+     console.log(userData);   
+    // const [name, setName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [phone, setPhone] = useState('');
 
     useEffect(() => {
-        user({name, email, phone});
-    }, [name, email, phone, user]);
+        user(userData);
+    }, [userData, user]);
 
     return (
         <div className="p-5">
@@ -21,7 +34,8 @@ const Form1 = ({ user }) => {
                      className="custom-width1 border border-3 rounded p-1"
                      placeholder="e.g. Stephen King"
                      required
-                     onChange={(e) => setName(e.target.value)}
+                     onChange={handleUserData}
+                     value={userData.name}
                     />
                 </div>
                 <div className="d-flex flex-column mb-3">
@@ -31,7 +45,7 @@ const Form1 = ({ user }) => {
                      className="custom-width1 border border-3 rounded p-1"
                      placeholder="e.g. stephenking@lorem.com"
                      required
-                     onChange={(e) => setEmail(e.target.value)}
+                     onChange={handleUserData}
                     />
                 </div>
                 <div className="d-flex flex-column mb-3">
@@ -41,7 +55,7 @@ const Form1 = ({ user }) => {
                      className="custom-width1 border border-3 rounded p-1"
                      placeholder="e.g. +1 234 567 890"
                      required
-                     onChange={(e) => setPhone(e.target.value)}
+                     onChange={handleUserData}
                     />
                 </div>
             </form>
